@@ -6,7 +6,7 @@ from .models import User
 
 
 def profile(request):
-    users = User.objects.all().select_related('profile')
+    users = User.objects.all()
 
     return render(request, 'users/profile.html', {'users': users})
 
