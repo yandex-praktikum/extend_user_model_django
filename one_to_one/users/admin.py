@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 from .models import Profile
 
-
 # Определим описание для встраивания в админку
 class ProfileInlined(admin.TabularInline):
     model = Profile
