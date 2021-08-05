@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 from .models import Profile
 
+
 # Определим описание для встраивания в админку
 class ProfileInlined(admin.TabularInline):
     model = Profile
@@ -14,8 +15,8 @@ class ProfileInlined(admin.TabularInline):
 class UserAdmin(BaseUserAdmin):
     inlines = (ProfileInlined,)
 
+
 # Перерегистрируем UserAdmin
 # Это позволит использовать админку с дополнительными полями вместо штатной
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
-
