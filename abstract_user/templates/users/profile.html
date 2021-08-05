@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+  <head>    
+    <meta charset="utf-8"> 
+  </head>
+  <body>
+  {% for user in users %}
+    <h2>{{ user.get_full_name }}</h2>
+    <ul>
+      <li>Username: {{ user.username }}</li>
+      <li>Bio: {{ user.bio }}</li>
+    </ul>
+  {% endfor %}
+  </body>
+</html>
